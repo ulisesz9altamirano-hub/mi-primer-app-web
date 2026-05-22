@@ -44,7 +44,7 @@
                     </div>
                 </div>
                 <div class="galeria-item">
-                    <img src="https://images.unsplash.com/photo-1571731956622-9a0427db1334?q=80&w=600" alt="Clases grupales">
+                    <img src="https://www.hsnstore.com/blog/wp-content/uploads/2015/08/entrenamiento-alta-intensidad.jpg" alt="Clases grupales">
                     <div class="galeria-overlay">
                         <span>Funcional y Crossfit</span>
                     </div>
@@ -62,7 +62,7 @@
                         <li><i class="fa-solid fa-check"></i> Acceso a la sala de musculación</li>
                         <li><i class="fa-solid fa-check"></i> Clases personalizadas</li>
                     </ul>
-                    <button class="btn-plan">Elegir un Plan</button>
+                    <button class="btn-plan" onclick="abrirDetallePlan('Pase diario', '$12.000 (3 días seguidos)', ['Acceso completo a la sala de musculación', 'Clases personalizadas con profesores de turno', 'Uso de vestuarios y lockers', 'Ideal para probar nuestras instalaciones sin contratos'])">Elegir un Plan</button>
                 </div>
 
                 <div class="plan-card destacado">
@@ -74,7 +74,34 @@
                         <li><i class="fa-solid fa-check"></i> Clases libres (crossfit y funcional)</li>
                         <li><i class="fa-solid fa-check"></i> Rutina personalizada por profes</li>
                     </ul>
-                    <button class="btn-plan">Elegir un Plan</button>
+                    <button class="btn-plan" onclick="abrirDetallePlan('Mensual libre', '$25.000 / mes', ['Musculación y cardio libre sin límite de horario', 'Clases especiales libres de crossfit y funcional', 'Armado y renovación de rutina personalizada por profesores', 'Acceso a la app de seguimiento de objetivos'])">Elegir un Plan</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="vista-detalle-plan" class="detalle-plan-hidden">
+            <div class="detalle-container">
+                <button id="btn-volver-planes" onclick="volverAPlanes()"><i class="fa-solid fa-arrow-left"></i> Volver a los Planes</button>
+                <div class="detalle-content-wrapper">
+                    <div class="detalle-info-box">
+                        <span class="badge-categoria">Plan Seleccionado</span>
+                        <h2 id="detalle-titulo">Nombre del Plan</h2>
+                        <div id="detalle-precio" class="precio-destacado">$0.000</div>
+                        
+                        <div class="beneficios-destacados">
+                            <h3><i class="fa-solid fa-star"></i> ¿Qué incluye tu acceso?</h3>
+                            <ul id="detalle-beneficios">
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="detalle-accion-box">
+                        <h3>¡Empezá hoy mismo!</h3>
+                        <p>Registrá tu inscripción de forma segura con Mercado Pago y comenzá a entrenar de inmediato.</p>
+                        <button class="btn-confirmar-inscripcion" onclick="procesarPago()">
+                            <i class="fa-solid fa-credit-card"></i> Pagar con Mercado Pago
+                        </button>   
+                    </div>  
                 </div>
             </div>
         </section>
@@ -82,12 +109,10 @@
 
     <footer id="contacto">
         <div class="footer-info">
-            <h3><i class="fa-solid fa-location-dot"></i> UBICACIÓN, HORARIOS Y CONTACTO</h3>
+            <h3><i class="fa-solid fa-location-dot"></i> UBICACIÓN Y HORARIOS</h3>
             <p>Carril Barrancas, Ruta Provincial 14, Maipú, Mendoza</p>
-            <P>Contacto: 2617111500 (Ulises Altamirano)</P>
             <p><i class="fa-regular fa-clock"></i> Lunes a viernes: 09:00 a 12:00 hs y de 16:00 a 22:00 hs</p>
             <p><i class="fa-regular fa-clock"></i> Sábados: 09:00 a 12:00 hs</p>
-            <p>&copy; Todos los derechos reservados</p>
         </div>
     </footer>
 
